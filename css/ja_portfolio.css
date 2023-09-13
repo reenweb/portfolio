@@ -49,6 +49,11 @@ header > .inner{
     justify-content: space-between;
     align-items: center;
 }
+header > .inner img{
+    height: 20px;
+    object-fit: cover;
+    vertical-align: bottom;
+}
 header > .inner .menu{
     display: inherit;
     flex-direction: row;
@@ -93,6 +98,7 @@ article{
     height: 300px;
 }
 .profile .text{
+    width: 100%;
     display: inherit;
     flex-direction: column;
 }
@@ -170,9 +176,11 @@ article{
 .project section > div ul{
     display: inherit;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 .project section > div ul li{
+    width: 100%;
     display: inherit;
     flex-direction: column;
     gap: 5px;
@@ -228,9 +236,7 @@ footer > .inner > div p{
     font-weight: 500;
 }
 @media screen and (max-width: 960px) {
-    .profile{
-        flex-direction: column;
-    }
+
     article{
         max-width: 600px;
         width: 100%;
