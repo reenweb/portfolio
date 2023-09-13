@@ -1,0 +1,615 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    text-decoration: none;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+:root{
+    --swiper-theme-color: #7F0019;
+}
+ul,li{
+    list-style: none;
+}
+h1{
+    font-size: 24px;
+    font-weight: 800;
+    color: #000;
+}
+p{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.73px;
+    color: #000;
+}
+span{
+    color: #000;
+    font-weight: 800;
+}
+a{
+    font-size: 15px;
+    color: #000;
+}
+/* 해더 */
+header .inner{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.inner > div{
+    max-width: 1180px;
+    width: 100%;
+    height: 40px;
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.inner .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.inner > div > i{
+    display: none;
+    width: 40px;
+}
+.icons a{
+    width: 40px;
+}
+.icons button{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+.icons > div{
+    display: flex;
+    flex-direction: row;
+}
+#searchform{
+    height: 40px;
+    border: 0;
+    padding: 0px 5px ;
+    border-bottom: 1px solid #7a7a7a;
+    display: none;
+}
+#searchform:focus{
+    outline: 0;
+}
+#searchform:focus::placeholder{
+color: transparent;
+}
+.icons button, .icon2, .icon3, .icon4, .icon5{
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 75%;
+    
+}
+#searchform.is-active{
+    display: block;
+}
+.icons button{
+    background-image: url(/muji/img/무인양품/icons/search.png);
+}
+.icons .icon2{
+    background-image: url(/muji//img/무인양품/icons/login.png);
+}
+.icons .icon3{
+    background-image: url(/muji//img/무인양품/icons/home.png);
+}
+.icons .icon4{
+    background-image: url(/muji//img/무인양품/icons/cart.png);
+}
+.icons .icon5{
+    background-image: url(/muji//img/무인양품/icons/info.png);
+}
+
+/* 너브 */
+nav{
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    max-width: 1140px;
+    width: 100%;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+}
+nav ul li{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+}
+nav > ul > li p{
+    font-size: 15px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav > ul > li a{
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    padding: 10px 10px;
+}
+nav > ul > li:hover > a{
+    font-weight: bold;
+    color: #7F0019;
+}
+ul.snb{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+.snb > li:hover > a,
+.snb > li > ul > li > a:hover{
+    font-weight: bold;
+    color: #7F0019;
+}
+.snb > li > ul > li > a{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.snb > li > ul > li > a::before{
+    content: '';
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+    position: absolute;
+    z-index: 0;
+    background: #7F0019;
+}
+.snb > li > ul > li > a:hover::before{
+    width: 40%;
+}
+nav > ul > li ul.snb.on{ display: flex; }
+.snb > li > ul{
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    justify-content: inherit;
+    align-items: inherit;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+}
+.snb > li:hover > ul{
+    display: flex;
+}
+
+/* main슬라이드 */
+section{
+    max-width: 1140px;
+    height: 700px;
+}
+section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+article{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+
+/* 5뷰슬라이드 */
+.contents01{
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.title{
+    width: 100%;
+    display: inherit;
+    justify-content: space-between;
+    border-bottom: 2px solid #F2F2F2;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.title > div{
+    display: flex;
+    align-items: center;
+    color: #7a7a7a;
+    cursor: pointer
+}
+.contents01 .inner{
+    display: inherit;
+    flex-direction: row;
+}
+.inner .left{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    margin-right: 30px;
+    padding: 38px 0 0 0;
+    gap: 10px;
+    
+    position: relative;
+    transition: ease .2s;
+}
+.left li{
+    width: 100px;
+    cursor: pointer;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.left li span{
+    position: relative;
+    z-index: 20;
+    font-weight: normal;
+}
+.left li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #F2F2F2;
+    width: 0%;
+    height: 100%;
+    transition: width .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    z-index: 10;
+}
+.left li:hover::before,
+.left li.is-active::before{
+    width: 100%;
+}
+
+.contents01 .right{
+    max-width: 1010px;
+    width: 100%;
+    height: 364px;
+}
+.right a{
+    display: flex;
+    flex-direction: column;
+}
+.right a p{
+    margin-top: 22px;
+    height: 48px;
+}
+.right a div{
+    margin-top: 10px;
+    display: flex;
+    justify-content: end;
+}
+.right img{
+    height: 195px;
+    background-color: #eee;
+    object-fit: cover;
+}
+.right div > a > span{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right div > a > .best01,.best02,.best03{
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 50% 0px;
+    color: #fff;
+}
+.right div > a > .best01{
+    background-image: url(/muji/img/무인양품/icons/crown_1.png);
+}
+.right div > a > .best02{
+    background-image: url(/muji/img/무인양품/icons/crown_2.png);
+}
+.right div > a > .best03{
+    background-image: url(/muji/img/무인양품/icons/crown_3.png);
+}
+.right .swiper-pagination{
+    bottom: 0;
+}
+
+
+/* tab구조 */
+.right > .swiper.is-show{
+    display: block;
+}
+.right > .swiper{
+    display: none;
+}
+
+
+
+/* 4장뷰 */
+.contents02{
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+}
+.contents02 .title{
+    display: inherit;
+    justify-content: space-between;
+}
+.contents02 .newitem{
+    width: 100%;
+    height: 300px;
+    max-width: 1140px;
+}
+.newitem  a > div > div{
+    display: flex;
+    justify-content: end;
+}
+.newitem > div > a{
+    position: relative;
+    height: 270px;
+}
+.newitem > div > a >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.newitem > div > a > div{
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: 21px;
+    left: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 12px 10px;
+    flex-direction: column;
+    gap: 10px;
+}
+.newitem > div > a:hover div{
+    display: flex;
+    bottom: 0;
+}
+.contents02 .swiper-pagination{
+    bottom: 0;
+}
+
+
+/* 마지막 */
+.contents03{
+    width: 100%;
+    max-width: 1140px;
+    margin-bottom: 60px;
+}
+.contents03 .post{
+    width: 100%;
+    height: 300px;
+}
+.contents03 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 후터 */
+footer{
+    display: flex;
+    justify-content: center;
+    height: 166px;
+    background-color: #f0f2f5;
+}
+footer .inner{
+    display: inherit;
+    max-width: 1140px;
+    flex-direction: column;
+    padding: 30px 0 0 0;
+    gap: 20px;
+}
+.inner > .txt{
+    display: inherit;
+    flex-direction: row;
+    gap: 30px;
+}
+.inner > .icon{
+    display: inherit;
+    justify-content: center;
+    gap: 10px;
+}
+.inner > .icon > a{
+    width: 40px;
+}
+.inner > .icon > .f-icon1, .f-icon2, .f-icon3{
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 75%;
+    background-color: #fff;
+}
+.inner > .icon .f-icon1{
+    background-image: url(/muji/img/무인양품/icons/instagram.png);
+}
+.inner > .icon .f-icon2{
+    background-image: url(/muji/img/무인양품/icons/blog.png);
+}
+.inner > .icon .f-icon3{
+    background-image: url(/muji/img/무인양품/icons/app.png);
+}
+
+
+@media screen and (max-width: 960px){
+    :root{
+        --swiper-navigation-size:40px;
+    }
+    article{
+        margin: 0px 15px;
+    }
+    header .inner > div{
+        padding: 0px 10px;
+    }
+    .inner > div > i{
+        display: block;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 75%;
+        background-image: url(/muji/img/무인양품/icons/menu.svg);
+        cursor: pointer;
+    }
+    .icons > div, .icon5{
+        display: none;
+    }
+    
+    /* 햄버거 버튼, 1차메뉴 출력 */
+    nav > ul{
+        display: none;
+    }
+    nav > ul.on{
+        display: flex;
+    }
+    nav{
+        height: 100%;
+        position: relative;
+
+    }
+    nav > ul{
+        max-width: 960px;
+        width: 100%;
+        top: 0px;
+        flex-direction: column;
+        position: absolute;
+        z-index: 30;
+    }
+    nav > ul > li.nav2{
+        background-color: #fff;
+        padding-left: 40px;
+    }
+    nav > ul > li  a{
+        justify-content: flex-start;
+        padding-left: 26px;
+    }
+    /* 2차메뉴 */
+    /* pc디자인해제 */
+    ul .snb{
+        display: none;
+        position: initial;
+        transform: translateX(0%);
+    }
+    /* 태블릿 클릭시 이벤트 */
+    .snb > li{
+        padding-left: 26px;
+    }
+    .snb > li > ul {
+        position: initial;
+        display: flex;
+    }
+    .snb > li > ul > li{
+        padding-left: 26px;
+    }
+
+    /* 메인슬라이드 */
+    .slide{
+        height: auto;
+    }
+    .swiper-wrapper{
+        max-width: 960px;
+        width: 100%;
+    }
+
+    /* best */
+    .contents01{
+        margin-top: 30px;
+        height: auto;
+    }
+    .title > div > a{
+        display: none;
+    }
+    .contents01 > .inner{
+        display: flex;
+        flex-direction: column;
+    }
+    .inner > .left{
+        max-width: 960px;
+        width: 100%;
+        padding-top: 0px;
+        margin-bottom: 20px;
+        display: inherit;
+        flex-direction: row;
+    }
+    .inner > div{
+        padding: 0px;
+    }
+    .contents01 .right{
+        height: 307px;
+    }
+    .right img{
+        height: 140px;
+    }
+    .left li {
+        background-color: #F2F2F2;
+        border-radius: 20px;
+        transition: none;
+    }
+    .left li:hover{
+        background-color: #7F0019;
+    }
+    .left span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 110px;
+        width: 100%;
+        max-height: 38px;
+        height: 100%;
+    }
+    .left span:hover{
+        color: #fff;
+    }
+    .left li::before{
+    background-color: #fff;
+    width: 0%;
+    height: 100%;
+    transition: none;
+    z-index: -1;
+    }
+    .left li.is-active span{
+        color: #fff;
+    }
+    .left li.is-active{
+        background-color: #7F0019;
+    }
+
+    /* new */
+    .contents02 .newitem{
+        height: 200px;
+    }
+    .newitem > div > a,
+    .newitem > div > a img{
+        height: 170px;
+    }
+
+    /* 기획 */
+    .contents03 .post,
+    .contents03 img{
+        height: 170px;
+    }
+}
