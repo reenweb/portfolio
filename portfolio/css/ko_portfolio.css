@@ -1,0 +1,293 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 1px solid red;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+h1,h2{
+    color: #000;
+}
+a{
+    color: #000;
+}
+:root{
+    --swiper-theme-color: #000;
+    --swiper-navigation-size: 40px;
+}
+
+/* 해더 */
+header{
+    padding: 20px 20px;
+    max-width: 1920px;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 50;
+    background-color: #fff;
+}
+header > .inner{
+    max-width: 1920px;
+    width: 95%;
+    height: 85px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header > .inner > img{
+    background-color: #333;
+}
+.inner > .menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+.menu > a:nth-child(3){
+    font-weight: 400;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+.menu > a:nth-child(3):hover{
+    background-color: #4e7679;
+}
+
+/* 메인 */
+main > .inner{
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 50px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+.inner > article > div{
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    width: 100%;
+}
+
+/* 아바웃미 */
+.aboutme{
+    max-width: 960px;
+    width: 100%;
+    padding: 0 50px;
+}
+.aboutme > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.profile{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+.profile > img{
+    height: 300px;
+    object-fit: cover;
+}
+.text > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.text > ul > li{
+    list-style: none;
+    display: inherit;
+    flex-direction: column;
+    gap: 20px;
+}
+.text > ul li > h1{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+.education > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.education > ul li{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.date{
+    color: #979797;
+    width: 131px;
+}
+
+.ceritificate > ul{
+    display: flex;
+    flex-direction: row;
+}
+.ceritificate > ul li{
+    list-style: none;
+}
+.ceritificate > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.skill > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.skill > ul li{
+    display: inherit;
+    flex-direction: row;
+}
+.skill > ul img{
+    width: 50px;
+}
+
+
+/* 프로젝트 */
+.project{
+    margin: 0 auto;
+    padding: 0 50px;
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.project > div{
+    display: inherit;
+    align-items: center;
+}
+.swiper{
+    border: 2px solid #000;
+    border-radius: 30px;
+}
+.swiper-wrapper{
+    display: flex;
+    align-items: center;
+}
+.projectA,
+.projectB{
+    padding: 30px 50px;
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.projectA img,
+.projectB img{
+    height: 350px;
+    object-fit: cover;
+}
+
+.projectA > div,
+.projectB > div{
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.projectA > div a,
+.projectB > div a{
+    display: inherit;
+    justify-content: center;
+    width: 186px;
+    padding: 10px;
+    color: #000;
+    font-weight: 500;
+    border: 2px solid #000;
+    border-radius: 39px;
+}
+.projectA > div a:hover,
+.projectB > div a:hover{
+    background-color: #4e7679;
+}
+footer{
+    height: 100px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer > .inner{
+    max-width: 960px;
+    width: 100%;
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+footer > .inner > p{
+    /* color: #fff; */
+    font-weight: 500;
+}
+footer > .inner > div{
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+footer > .inner > div img{
+    padding: 5px;
+    object-fit: cover;
+    border: 1.8px solid #000;
+    border-radius: 20px;
+}
+footer > .inner > div p{
+    /* color: #fff; */
+    font-weight: 500;
+}
+
+@media screen and (max-width: 960px) {
+    .aboutme{
+        padding: 0;
+    }
+    .inner > article > div,
+    .project{
+        max-width: 600px;
+        width: 100%;
+        padding: 0;
+    }
+    .profile{
+        flex-direction: column;
+    }
+    .projectA, .projectB{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .projectA > div, .projectB > div{
+        gap: 20px;
+        align-items: center;
+    }
+    .projectA img, .projectB img{
+        height: 300px;
+    }
+    .projectA > div h2, .projectB > div h2{
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,419 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    text-decoration: none;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+a{
+    color: #0017C1;
+}
+span{
+    font-size: 20px;
+    font-weight: 700;
+}
+h1{
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #0017C1;
+}
+h2{
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 17px;
+}
+p{
+    font-size: 15px;
+    line-height: 22px;
+}
+
+/* 헤더 */
+header{
+    width: 100%;
+    left: 0;
+    position: fixed;
+    background-color: #fff;
+}
+header > .inner{
+    max-width: 940px;
+    width: 100%;
+    height: 105px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.inner a {
+    display: inherit;
+    align-items: center;
+}
+.inner a > span{
+    height: 50px;
+}
+.inner > a img{
+    width: 50px;
+    height: 100%;
+    vertical-align: bottom;    
+}
+.inner .person,
+.inner .tabmenu{
+    display: none;
+}
+.inner > div{
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+.inner .pcmenu > div{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+}
+.inner > div > a:nth-child(3){
+    font-size: 15px;
+    padding: 5px;
+    border: 0.5px solid #0017C1;
+    border-radius: 8px;
+}
+.inner > div > a:nth-child(3):hover{
+    border: 0.5px solid #000082;
+    background-color: #000082;
+    font-weight: 700;
+    color: #fff;
+}
+/* select 스타일 */
+.langtop{
+    position: relative;
+    margin: 0 0;
+}
+.langtop > button{
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #0017C1;
+    border-radius: 10px;
+}
+
+/* 메인 */
+main{
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.main{
+    margin-top: 180px;
+    display: flex;
+    flex-direction: row;
+    gap: 33px;
+}
+.title{
+    max-width: 312px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.title > img{
+    width: 312px;
+    vertical-align: bottom;
+}
+.title > img:nth-child(2){
+    display: none;
+}
+.mainbtn1{
+    margin-top: 18px;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #003EE5;
+    border-radius: 8px;
+}
+.mainbtn1:hover{
+    background-color: #000082;
+}
+.mainbtn1 > a{
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+.mainbtn2{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.mainbtn2 > a{
+    font-size: 13px;
+}
+.right{
+    display: flex;
+    align-items: center;
+}
+.right > img{
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* 콘텐츠1 */
+.contents01 > div{
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #eaeaea;
+    border-radius: 20px;
+}
+.contents01 > div > div > h2::before{
+    content: "▶";
+    margin-right: 5px;
+    color: #444;
+}
+.contents01 div > p > a{
+    font-weight: 700;
+}
+.contents01 div > p > a{
+    background-size: 16px;
+    padding: 0 16px 0 0;
+}
+.contents01 div > p > a::after{
+    content: "";
+    background: url(/visitjapanweb/img/external_16px.png) no-repeat;
+    background-size: 16px;
+}
+
+/* 콘텐츠2 */
+.contents02 > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contents02 > div > div{
+    margin-top: 40px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid #0017C1;
+    border-radius: 20px;
+}
+.contents02 > div > div > img{
+    width: 202px;
+    height: auto;
+}
+
+/* 콘텐츠3 */
+.contents03 > div{
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 20px;
+    border: 3px solid #0017C1;
+}
+.contents03 > div > div{
+    display: inherit;
+    flex-direction: column;
+}
+.contents03 > div > div p{
+    display: inherit;
+    justify-content: center;
+}
+.contents03 > div > div img{
+    height: 170px;
+    object-fit: contain;
+}
+.ticket{
+    width: 154px;
+}
+.passport{
+    width: 102px;
+}
+.email{
+    width: 103px;
+}
+.email > p{
+    letter-spacing: -1px;
+}
+
+/* 콘텐츠4 */
+.contents04{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.contents04 a{
+    width: 312px;
+    padding: 15px;
+    background-color: #0017C1;
+    display: inherit;
+    justify-content: center;
+    border-radius: 10px;
+}
+.contents04 a:hover{
+    background-color: #000082;
+}
+.contents04 a > p{
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+.contents04 > p{
+    margin-bottom: 15px;
+}
+
+/* 콘텐츠5 */
+.contents05 > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contents05 > div > a::before{
+    content: "●";
+    color: #444;
+    margin-right: 5px;
+}
+
+/* 후터 */
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #0017C1;
+    display: flex;
+    align-items: center;
+}
+footer > div{
+    margin: 0 auto;
+    max-width: 940px;
+    width: 100%;
+}
+footer img{
+    width: 130px;
+    vertical-align: bottom;
+}
+
+/* 번역버튼부분 */
+#google_translate_element{ display: none; }
+.btTranslateLang{
+    cursor: pointer;
+    padding: 10px;
+}
+.VIpgJd-ZVi9od-ORHb-OEVmcd{
+    top: -300px !important;
+    display: none;
+}
+#goog-gt-tt{ display: none !important; }
+body{
+    top: 0 !important;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+@media screen and (max-width: 768px){
+    header > .inner{
+        max-width: 708px;
+        width: 95%;
+        height: 75px;
+    }
+    .inner > a > span{
+        width: 48px;
+        height: auto;
+    }
+    .inner > a > span > img{
+        width: 48px;
+        height: auto;
+    }
+    .inner .person,
+    .inner .tabmenu{
+        display: flex;
+    }
+    .person > img{
+        width: 40px;
+    }
+    .tabmenu > img{
+        width: 40px;
+        cursor: pointer;
+    }
+    .langtop > select{
+        display: none;
+    }
+    .langtop::before{
+        background-size: 28px 28px;
+        width: 28px;
+        height: 28px;
+    }
+    .inner > div{
+        position: relative;
+    }
+    .inner > div > .pcmenu{
+        display: none;
+    }
+    .inner > div > .pcmenu.on{
+        display: flex;
+    }
+    .inner > div > .pcmenu > div{
+        padding: 40px 55px;
+        width: 100%;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+        top: 75px;
+        gap: 20px;
+        background-color:rgba(0,16,135,90%);
+    }
+    .inner > div > .pcmenu > div a{
+        color: #fff;
+        font-weight: 700;
+        padding-bottom: 3px;
+        font-size: 20px;
+        border-bottom: 1.5px solid rgba(0,16,135,1%);
+    }
+    .inner .pcmenu > div a:hover{
+        border-bottom: 1.5px solid #fff;
+    }
+    main{
+        max-width: 708px;
+        width: 85%;
+    }
+    .main{
+        flex-direction: column;
+        margin-top: 130px;
+    }
+    .title{
+        max-width: 768px;
+        width: 100%;
+    }
+    .title > img:nth-child(1){
+        display: none;
+    }
+    .title > img:nth-child(2){
+        display: flex;
+        max-width: 768px;
+        width: 100%;
+    }
+    .contents02 > div{
+        display: none;
+    }
+    footer > div{
+        max-width: 768px;
+        width: 95%;
+    }
+}
