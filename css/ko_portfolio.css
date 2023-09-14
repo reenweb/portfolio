@@ -304,7 +304,7 @@ footer > .inner > div p{
         width: 100%;
     }
 }
-@media screen and (max-width: 390px) {
+@media screen and (min-width: 390px) {
     :root{
         --swiper-navigation-size: 30px;
     }
