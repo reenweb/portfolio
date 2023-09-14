@@ -272,7 +272,7 @@ footer > .inner > div p{
     font-weight: 500;
 }
 
-@media screen and (max-width: 960px) {
+/* @media screen and (max-width: 960px) {
     header{
         max-width: 960px;
         width: 100%;
@@ -303,8 +303,8 @@ footer > .inner > div p{
     .projectA > div h2, .projectB > div h2{
         width: 100%;
     }
-}
-@media screen and (min-width: 390px) {
+} */
+/* @media screen and (max-width: 390px) {
     :root{
         --swiper-navigation-size: 30px;
     }
@@ -395,4 +395,4 @@ footer > .inner > div p{
     footer > .inner > div img {
         width: 28px;
     }
-}
+} */
