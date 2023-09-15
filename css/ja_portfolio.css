@@ -24,7 +24,7 @@ h1{
     margin-bottom: 40px;
 }
 h2{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /* 해더 */
@@ -84,6 +84,7 @@ article{
     width: 100%;
     margin: 0 auto;
     margin-top: 130px;
+    padding: 0 50px;
     display: flex;
     flex-direction: column;
 }
@@ -142,15 +143,30 @@ article{
     border-radius: 10px;
     background-color: #F3FAFA;
 }
-.ceritificate > ul,
+.ceritificate > ul{
+    display: inherit;
+    flex-direction: row;
+    gap: 15px;
+}
 .skill > ul{
     display: inherit;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
 }
 .skill > ul img{
     width: 50px;
     object-fit: cover;
+}
+#project li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.mobilemenu{
+    display: none;
 }
 /* 프로젝트 */
 .project{
@@ -170,8 +186,10 @@ article{
     flex-direction: column;
 }
 .project section > div img{
-    height: 490px;
+    max-width: 644px;
+    width: 100%;
     object-fit: cover;
+    vertical-align: bottom;
 }
 .project section > div ul{
     display: inherit;
@@ -200,15 +218,22 @@ article{
 }
 .muji > div, .vjw > div{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 30px;
 }
+.muji > div > div, .vjw > div > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* 후터 */
 footer{
     height: 100px;
     background-color: #4e7679;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 footer > .inner{
     max-width: 960px;
@@ -234,23 +259,4 @@ footer > .inner > div img{
 footer > .inner > div p{
     color: #fff;
     font-weight: 500;
-}
-@media screen and (max-width: 960px) {
-
-    article{
-        max-width: 600px;
-        width: 100%;
-    }
-    .aboutme .skills{
-        max-width: 600px;
-        width: 100%;
-        flex-direction: column;
-    }
-    .muji > div, .vjw > div{
-        flex-direction: column-reverse;
-        gap: 50px;
-    }
-    .project section > div ul{
-        align-items: center;
-    }
 }

@@ -1,0 +1,53 @@
+header > .inner .menu{
+    gap: 10px;
+}
+header > .inner .menu > a{
+    color: #3e2100;
+}
+.profile{
+    flex-direction: column;
+}
+header > .inner .menu{
+    display: none;
+}
+header > .inner .menu > a:nth-child(3){
+    padding: 0;
+    color: #3e2100;
+    background-color: #fff;
+}
+.inner > .menu.on{
+    display: flex;
+    top: 83px;
+    left: 0;
+    max-width: 640px;
+    width: 100%;
+    padding: 25px;
+    background-color: #fff;
+    position: fixed;
+    flex-direction: column;
+    gap: 20px;
+}
+.mobilemenu{
+    display: flex;
+    width: 25px;
+}
+article{
+    max-width: 640px;
+    width: 100%;
+    padding: 0 50px;
+}
+.aboutme .skills{
+    max-width: 640px;
+    width: 100%;
+    flex-direction: column;
+}
+.muji > div, .vjw > div{
+    flex-direction: column-reverse;
+    gap: 50px;
+}
+.project section > div ul{
+    align-items: center;
+}
+.project section > div img{
+    height: 100%;
+}

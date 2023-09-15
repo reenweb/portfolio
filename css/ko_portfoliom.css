@@ -8,10 +8,7 @@ header{
     max-width: 640px;
     width: 100%;
 }
-header .inner{
-    position: relative;
-    z-index: 10;
-}
+
 .inner > .menu{
     display: none;
 }
@@ -27,14 +24,14 @@ header .inner{
 .inner > .menu.on{
     display: flex;
     top: 83px;
+    left: 0;
     max-width: 640px;
     width: 100%;
     padding: 25px;
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     gap: 20px;
-    z-index: 100;
 }
 .mobilemenu{
     display: flex;
