@@ -76,7 +76,6 @@ header > .inner img{
 
 /* 메인 */
 main > .inner{
-    margin: 0 auto;
     margin-top: 80px;
     padding: 50px 0 100px 0;
     display: flex;
@@ -138,7 +137,7 @@ main > .inner{
 }
 .date{
     color: #979797;
-    width: 131px;
+    width: 149px;
 }
 
 .ceritificate > ul{
@@ -150,9 +149,9 @@ main > .inner{
 }
 .ceritificate > ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
 }
 .skill > ul{
     display: flex;
@@ -196,18 +195,18 @@ main > .inner{
 }
 .projectA,
 .projectB{
-    padding: 30px 50px;
+    padding: 30px 65px;
     max-width: 960px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
 }
 .projectA img,
 .projectB img{
-    height: 350px;
+    width: 65%;
     object-fit: cover;
 }
 
@@ -216,7 +215,7 @@ main > .inner{
     display: inherit;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 .projectA > div a,
@@ -252,7 +251,6 @@ footer > .inner{
     gap: 100px;
 }
 footer > .inner > p{
-    /* color: #fff; */
     font-weight: 500;
 }
 footer > .inner > div{
@@ -268,131 +266,5 @@ footer > .inner > div img{
     border-radius: 20px;
 }
 footer > .inner > div p{
-    /* color: #fff; */
     font-weight: 500;
 }
-
-/* @media screen and (max-width: 960px) {
-    header{
-        max-width: 960px;
-        width: 100%;
-    }
-    .aboutme{
-        padding: 0;
-    }
-    .inner > article > div,
-    .project{
-        max-width: 600px;
-        width: 100%;
-        padding: 0;
-    }
-    .profile{
-        flex-direction: column;
-    }
-    .projectA, .projectB{
-        flex-direction: column;
-        gap: 50px;
-    }
-    .projectA > div, .projectB > div{
-        gap: 20px;
-        align-items: center;
-    }
-    .projectA img, .projectB img{
-        height: 300px;
-    }
-    .projectA > div h2, .projectB > div h2{
-        width: 100%;
-    }
-} */
-/* @media screen and (max-width: 390px) {
-    :root{
-        --swiper-navigation-size: 30px;
-    }
-    a{
-        font-size: 15px;
-    }
-    header{
-        max-width: 390px;
-        width: 100%;
-    }
-    header .inner{
-        position: relative;
-        z-index: 10;
-    }
-    .inner > .menu{
-        display: none;
-    }
-    .menu > a:nth-child(3){
-        border: none;
-    }
-    .inner > .menu a:hover{
-        color: #4e7679;
-        background-color: rgba(255, 255, 255, 0.8);
-        box-shadow: 0 0 #fff;
-        border: none;
-    }
-    .inner > .menu.on{
-        display: flex;
-        top: 83px;
-        max-width: 390px;
-        width: 100%;
-        padding: 25px;
-        background-color: #fff;
-        position: absolute;
-        flex-direction: column;
-        gap: 20px;
-        z-index: 100;
-    }
-    .mobilemenu{
-        display: flex;
-        width: 25px;
-    }
-    main > .inner{
-        gap: 50px;
-        padding-bottom: 50px;
-        margin-top: 40px;
-    }
-    .aboutme{
-        max-width: 390px;
-        width: 100%;
-        padding: 30px;
-    }
-    .education > ul li{
-        flex-direction: column;
-        gap: 5px;
-    }
-    .ceritificate > ul{
-        gap: 5px;
-    }
-    .skill > ul{
-        gap: 25px;
-        justify-content: center;
-    }
-    .inner > article > div{
-        padding: 0px;
-    }
-    .project{
-        max-width: 390px;
-        width: 100%;
-        padding: 30px;
-    }
-    .projectA img, .projectB img{
-        height: 200px;
-    }
-    .projectA, .projectB{
-        gap: 35px;
-    }
-    footer{
-        max-width: 390px;
-        width: 100%;
-    }
-    footer .inner{
-        gap: 20px;
-    }
-    footer > .inner > div{
-        gap: 5px;
-    }
-    footer > .inner > div img {
-        width: 28px;
-    }
-} */
