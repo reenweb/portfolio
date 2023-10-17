@@ -4,27 +4,26 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     text-decoration: none;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 main{
-    margin-bottom: 100px;
-    color: #3e2100;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 10;
 }
-ul{
-    list-style: none;
+h1,h2{
+    color: #000;
 }
-h1{
-    margin-bottom: 40px;
+a{
+    color: #000;
 }
-h2{
-    margin-bottom: 20px;
+:root{
+    --swiper-theme-color: #000;
+    --swiper-navigation-size: 40px;
 }
 
 /* 해더 */
@@ -54,59 +53,76 @@ header > .inner img{
     object-fit: cover;
     vertical-align: bottom;
 }
-header > .inner .menu{
-    display: inherit;
+.inner > .menu{
+    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 30px;
 }
-header > .inner .menu > a{
-    display: inherit;
-    flex-direction: column;
-    align-items: center;
-}
-header > .inner .menu > a:nth-child(3){
-    color: #fff;
-    padding: 13px 20px;
-    background-color: #3e2100;
+.menu > a:nth-child(3){
+    font-weight: 400;
+    padding: 5px 10px;
+    border: 1px solid #000;
     border-radius: 10px;
 }
-header > .inner .menu > a span{
-    font-size: 15px;
+.menu > a:nth-child(3):hover{
+    background-color: #4e7679;
+    box-shadow: 4px 4px 0 #000;
 }
-header > .inner .menu > a p{
-    font-size: 13px;
+.mobilemenu{
+    display: none;
 }
 
 /* 메인 */
-article{
+main > .inner{
+    margin-top: 80px;
+    padding: 50px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+.inner > article > div{
+    display: flex;
+    flex-direction: column;
     max-width: 960px;
     width: 100%;
-    margin: 0 auto;
-    margin-top: 130px;
+}
+
+/* 아바웃미 */
+.aboutme{
+    max-width: 960px;
+    width: 100%;
     padding: 0 50px;
+}
+.aboutme > div{
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 .profile{
-    height: 422px;
-    display: flex;
+    display: flex; 
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
-.profile img{
+.profile > img{
     height: 300px;
+    object-fit: cover;
 }
-.profile .text{
-    width: 100%;
+.text > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.text > ul > li{
+    list-style: none;
     display: inherit;
     flex-direction: column;
+    gap: 20px;
 }
-.profile .name{
-    display: inherit;
-    flex-direction: row;
-    justify-content: space-between;
+.text > ul li > h1{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
 }
 .education > ul{
     display: flex;
@@ -114,123 +130,112 @@ article{
     gap: 20px;
 }
 .education > ul li{
-    display: inherit;
+    display: flex;
     flex-direction: row;
     gap: 20px;
 }
 .date{
-    width: 131px;
     color: #979797;
+    width: 149px;
 }
-.aboutme section{
+
+.ceritificate > ul{
+    display: flex;
+    flex-direction: row;
+}
+.ceritificate > ul li{
+    list-style: none;
+}
+.ceritificate > ul{
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-.aboutme .skills{
+.skill > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.skill > ul li{
+    width: 79px;
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.skill > ul img{
+    width: 50px;
+}
+
+
+/* 프로젝트 */
+.project{
+    margin: 0 auto;
+    padding: 0 50px;
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.project > div{
+    display: inherit;
+    align-items: center;
+}
+.swiper{
+    border: 2px solid #000;
+    border-radius: 30px;
+}
+.swiper-wrapper{
+    display: flex;
+    align-items: center;
+}
+.projectA,
+.projectB{
+    padding: 30px 65px;
     max-width: 960px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 30px;
-}
-.ceritificate,
-.skill{
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    background-color: #F3FAFA;
-}
-.ceritificate > ul{
-    display: inherit;
-    flex-direction: row;
+    align-items: center;
     gap: 15px;
 }
-.skill > ul{
-    display: inherit;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-.skill > ul img{
-    width: 50px;
+.projectA img,
+.projectB img{
+    width: 65%;
     object-fit: cover;
-}
-#project li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-.mobilemenu{
-    display: none;
-}
-/* 프로젝트 */
-.project{
-    display: flex;
-    flex-direction: column;
-}
-.project section{
-    display: inherit;
-    flex-direction: column;
-    gap: 80px;
-}
-.project section > h2{
-    margin-bottom: 20px;
-}
-.project section > div{
-    display: inherit;
-    flex-direction: column;
-}
-.project section > div img{
-    max-width: 644px;
-    width: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
-}
-.project section > div ul{
-    display: inherit;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-.project section > div ul li{
-    width: 100%;
-    display: inherit;
-    flex-direction: column;
-    gap: 5px;
-}
-.project section > div ul li:nth-last-child(1){
-    margin-top: 20px;
-    width: 186px;
-    padding: 10px;
-    display: inherit;
-    align-items: center;
-    background-color: #d3295f;
-    border-radius: 39px;
-}
-.project section > div ul li:nth-last-child(1) p{
-    font-weight: 500;
-    color: #fff;
-}
-.muji > div, .vjw > div{
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 30px;
-}
-.muji > div > div, .vjw > div > div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
-/* 후터 */
+.projectA > div,
+.projectB > div{
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.projectA > div a,
+.projectB > div a{
+    display: inherit;
+    justify-content: center;
+    width: 186px;
+    padding: 10px;
+    color: #000;
+    font-weight: 500;
+    border: 2px solid #000;
+    border-radius: 39px;
+}
+.projectA > div a:hover,
+.projectB > div a:hover{
+    background-color: #4e7679;
+    box-shadow: 4px 4px 0 #000;
+}
 footer{
     height: 100px;
-    background-color: #4e7679;
+    background-color: #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,18 +250,20 @@ footer > .inner{
     gap: 100px;
 }
 footer > .inner > p{
-    color: #fff;
     font-weight: 500;
 }
 footer > .inner > div{
     display: inherit;
     flex-direction: row;
+    align-items: center;
     gap: 10px;
 }
 footer > .inner > div img{
-    width: 20px;
+    padding: 5px;
+    object-fit: cover;
+    border: 1.8px solid #000;
+    border-radius: 20px;
 }
 footer > .inner > div p{
-    color: #fff;
     font-weight: 500;
 }
